@@ -1,0 +1,33 @@
+$fontWeightVariants: "Thin" 100, "ExtraLight" 200, "Light" 300, "Regular" 400,
+  "Medium" 500, "SemiBold" 600, "Bold" 700, "ExtraBold" 800, "Black" 900;
+
+@each $fontWeightName, $fontWeight in $fontWeightVariants {
+  @font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: $fontWeight;
+    src: url("./assets/fonts/Poppins-#{$fontWeightName}.ttf");
+  }
+
+  @font-face {
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: $fontWeight;
+    src: url("./assets/fonts/Poppins-#{$fontWeightName}Italic.ttf");
+  }
+}
+
+body {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #f2f0ee;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.w-full {
+  width: 100%;
+}

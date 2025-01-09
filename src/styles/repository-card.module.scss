@@ -1,0 +1,60 @@
+@keyframes slide-bottom-to-top {
+  0% {
+    opacity: 0;
+    margin-top: 10%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  animation: slide-bottom-to-top 1s ease;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid transparent;
+
+  &:hover {
+    scale: 1.02;
+    border-color: #0958d9;
+  }
+
+  .heading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #0958d9;
+    word-wrap: break-word;
+
+    &:not(:hover) {
+      text-decoration: none;
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & > :first-child {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0.25rem;
+    }
+
+    :global {
+      .ant-tag {
+        margin: 0;
+      }
+    }
+  }
+}
